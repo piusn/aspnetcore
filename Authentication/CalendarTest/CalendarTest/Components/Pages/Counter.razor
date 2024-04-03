@@ -1,0 +1,42 @@
+﻿@page "/counter"
+@using System.Web
+@rendermode InteractiveServer
+@inject NavigationManager NavigationManager
+@inject IJSRuntime jsRuntime
+
+<PageTitle>Counter</PageTitle>
+
+<h1>Counter</h1>
+
+<p role="status">Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+@code {
+    private int currentCount = 0;
+
+    private async void IncrementCount()
+    {
+        // Generate a random state parameter
+        var state = GenerateRandomState();
+
+        // Store the state parameter securely (you may need to adjust this based on your application's architecture)
+        // For simplicity, you can store it in a session or local storage
+        await jsRuntime.InvokeVoidAsync("localStorage.setItem", "authState", state);
+
+       // string redirectUri = "signin-google";
+       // NavigationManager.NavigateTo("authentication/login?returnUrl=" + returnUrl);
+        currentCount++;
+
+        var redirectUri = NavigationManager.ToAbsoluteUri("signin-google"); // Redirect URL after authentication
+        var authUri = $"https://accounts.google.com/o/oauth2/auth?client_id=<>&redirect_uri={redirectUri}&response_type=code&scope=https://www.googleapis.com/auth/calendar.readonly&state={HttpUtility.HtmlEncode(state)}";
+        //await jsRuntime.InvokeVoidAsync("open", authUri, "_self");
+        NavigationManager.NavigateTo(authUri);
+    }
+
+    private string GenerateRandomState()
+    {
+        // Generate a random state parameter (you may need a more robust method depending on your requirements)
+        return Guid.NewGuid().ToString("N");
+    }
+}

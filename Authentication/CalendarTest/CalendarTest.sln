@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.34707.107
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalendarTest", "CalendarTest\CalendarTest.csproj", "{AC625B55-9E2B-4DAD-A359-1022F4BEEF84}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{132213E7-1F61-4330-8FA5-8A6858E26DCC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "blazor-google-auth", "blazor-google-auth-main\blazor-google-auth-main\blazor-google-auth.csproj", "{CC051876-8814-4BC1-A20A-7ED986B32AF7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC625B55-9E2B-4DAD-A359-1022F4BEEF84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC625B55-9E2B-4DAD-A359-1022F4BEEF84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC625B55-9E2B-4DAD-A359-1022F4BEEF84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC625B55-9E2B-4DAD-A359-1022F4BEEF84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{132213E7-1F61-4330-8FA5-8A6858E26DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{132213E7-1F61-4330-8FA5-8A6858E26DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{132213E7-1F61-4330-8FA5-8A6858E26DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{132213E7-1F61-4330-8FA5-8A6858E26DCC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC051876-8814-4BC1-A20A-7ED986B32AF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC051876-8814-4BC1-A20A-7ED986B32AF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC051876-8814-4BC1-A20A-7ED986B32AF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC051876-8814-4BC1-A20A-7ED986B32AF7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3143C481-9198-407A-BC8E-8924955C4EFA}
+	EndGlobalSection
+EndGlobal
